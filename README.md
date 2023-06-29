@@ -10,7 +10,7 @@ With this SDK, you can scan and configure Blue Charm Beacon devices. The SDK inc
 * KBAuthHandler: Responsible for the authentication operation with the Blue Charm Beacon device after the connection is established.  
 * KBCfgHandler：Responsible for configuring parameters related to Blue Charm Beacon devices.  
 * DFU Library: Responsible for Blue Charm Beacon firmware update.
-![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/kbeacon_class_arc.png?raw=true)
+![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/kbeacon_class_arc.png?raw=true)
 
 **Scanning Stage**
 
@@ -784,7 +784,7 @@ void updateModifyParaToDevice()
 	&nbsp;We set an larger advertisement interval during alive advertisement and a short advertisement interval when trigger event happened, so we can achieve a balance between power consumption and triggers advertisement be easily detected.  
   &nbsp;&nbsp; 3. Add a single button trigger(Trigger No = 0, Trigger type = Btn single click, Action = advertisement, Adv slot = 1, Adv duration = 20).  
 	 &nbsp;&nbsp;
- 	![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/always_adv_with_trigger.png?raw=true)
+ 	![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/always_adv_with_trigger.png?raw=true)
 
 
 
@@ -965,7 +965,7 @@ The KBeacon can start broadcasting when it detects motion. Also the app can sett
 Enabling motion trigger is similar to push button trigger, which will not be described in detail here.
 
 1. Enable motion trigger feature.  
- 	![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/motion_trigger_example.jpg?raw=true)
+ 	![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/motion_trigger_example.jpg?raw=true)
 ```Java
 public void enableMotionTrigger() {
     if (!mBeacon.isConnected()) {
@@ -1140,9 +1140,9 @@ public void enableTHPeriodicallyTriggerRpt2App(){
 The Cutoff trigger is suitable for tamper-evident beacon such as W3, W7. Or Door beacon such as the S1.  
 When the cut-off was detected, the beacon will send the specfic advertisement to the cloud/backend and trigger the alert, the administrator will response and help.  
 *Wristband Beacon  
-![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/wristbandCutoffTrigger.png?raw=true)  
+![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/wristbandCutoffTrigger.png?raw=true)  
 *CutoffWatchband  
-![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/doorCutoffTrigger.png?raw=true)  
+![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/doorCutoffTrigger.png?raw=true)  
 
 ```Java
 //The following example is that the beacon usually broadcasts the iBeacon message in Slot0.
@@ -1860,13 +1860,13 @@ public void resetParameters() {
 ## 5. DFU
 Through the DFU function, you can upgrade the firmware of the device. Our DFU function is based on Nordic's DFU library. In order to make it easier for you to integrate the DFU function, We add the DFU function into ibeacondemo demo project for your reference. The Demo about DFU includes the following class:
 * KBeaconDFUActivity: DFU UI activity and procedure about how to download latest firmware.
-* KBFirmwareDownload: Responsible for download the JSON or firmware from KKM clouds.
+* KBFirmwareDownload: Responsible for download the JSON or firmware from Blue Charm KBeacon cloud.
 * DFUService: This DFU service that implementation Nordic's DFU library.
 * NotificationActivity: During the upgrade, a notification will pop up, click on the notification to enter this activity.
-![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/kbeacon_dfu_arc.png?raw=true)
+![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/kbeacon_dfu_arc.png?raw=true)
 
 ### 5.1 Add DFU function to the application.
-1. The DFU library need download the latest firmware from KKM cloud server. So you need add follow permission into AndroidManifest.xml
+1. The DFU library need download the latest firmware from Blue Charm KBeacon cloud server. So you need add follow permission into AndroidManifest.xml
  ```
 <uses-permission android:name="android.permission.INTERNET" />
  ```
@@ -1890,7 +1890,6 @@ implementation 'no.nordicsemi.android:dfu:1.10.3'
         }
 }
 ```
-If you want to known more details about getting the Device's latest firmware from KKM cloud, or deploied the latest firmware on you cloud. Please contact KKM sales(sales@kkmcn.com) and she/he will send you a detail document.
 
  Also for more detail nordic DFU library, please refer to
 https://github.com/NordicSemiconductor/Android-DFU-Library
