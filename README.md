@@ -1,4 +1,4 @@
-#KBeacon Android SDK Instruction DOC（English）
+#Blue Charm Beacons Android SDK Instruction DOC（English）
 
 ----
 ## 1. Introduction
