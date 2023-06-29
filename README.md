@@ -22,9 +22,9 @@ After a KBeacon connected, developer can make some changes of the device by modi
 
 
 ## 2. Android demo
-There are 3 projects in this SDK, if you plan to use KBeacon for iBeacon related applications. I suggest you develop based on iBeacondemo.  
-If your application is based on the Eddystone protocol, I suggest you start from eddystonedemo.  
-If you are using KBeacon for sensors, such as temperature, humidity, and motion monitoring, please start from sensordemo.
+There are 3 projects in this SDK, if you plan to use your app for iBeacon related applications. I suggest you develop it based on iBeacondemo.  
+If your app will focus on the Eddystone protocol, I suggest you start from eddystonedemo.  
+If you are using your app for sensors, such as temperature, humidity, and motion monitoring, please start from sensordemo.
 
 ## 3. Import SDK to project
 Development environment:  
@@ -40,7 +40,7 @@ dependencies {
 }
 ```
 This library is also open source, please refer to this link.  
-[kbeaconlib](https://github.com/kkmhogen/android_kbeaconlib2)  
+[kbeaconlib](https://github.com/BlueCharmBeacons/BlueCharm_android_kbeaconlib2)  
 
 
 2. In your root project’s build.gradle file, make sure to include maven repository.
@@ -775,7 +775,7 @@ void updateModifyParaToDevice()
   &nbsp;&nbsp; 1. Setting slot 0 to iBeacon advertisement(adv period = 211.25ms, trigger only adv = true).  
   &nbsp;&nbsp; 2. Add a single button trigger(Trigger No = 0, Trigger type = Btn single click, Action = advertisement, Adv slot = 0, Adv duration = 20).  
 	&nbsp;&nbsp;  
-	![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/only_adv_when_trigger.png?raw=true)
+	![avatar](https://github.com/BlueCharmBeacons/BlueCharm_KBeaconProDemo_Android/blob/main/only_adv_when_trigger.png?raw=true)
 
  Example 2:  Trigger advertisment
 	&nbsp;For some scenario, we need to continuously monitor the KBeacon to ensure that the device was alive. The device usually broadcasting iBeacon1(UUID=xxx1) , and we want to trigger the broadcast iBeacon2(uuid=xxx2) when the button is pressed.   
