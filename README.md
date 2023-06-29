@@ -2,19 +2,19 @@
 
 ----
 ## 1. Introduction
-With this SDK, you can scan and configure the KBeacon device. The SDK include follow main class:
-* KBeaconsMgr: Global definition, responsible for scanning KBeacon devices advertisment packet, and monitoring the Bluetooth status of the system;  
+With this SDK, you can scan and configure Blue Charm Beacon devices. The SDK include follow main class:
+* KBeaconsMgr: Global definition, responsible for scanning Blue Charm Beacon devices advertisment packet, and monitoring the Bluetooth status of the system;  
 
-* KBeacon: An instance of a KBeacon device, KBeaconsMgr creates an instance of KBeacon while it found a physical device. Each KBeacon instance has three properties: KBAdvPacketHandler, KBAuthHandler, KBCfgHandler.
+* KBeacon: An instance of a Blue Charm Beacon device, KBeaconsMgr creates an instance of KBeacon while it found a physical device. Each KBeacon instance has three properties: KBAdvPacketHandler, KBAuthHandler, KBCfgHandler.
 * KBAdvPacketHandler: parsing advertisement packet. This attribute is valid during the scan phase.  
-* KBAuthHandler: Responsible for the authentication operation with the KBeacon device after the connection is established.  
-* KBCfgHandler：Responsible for configuring parameters related to KBeacon devices.  
-* DFU Library: Responsible for KBeacon firmware update.
+* KBAuthHandler: Responsible for the authentication operation with the Blue Charm Beacon device after the connection is established.  
+* KBCfgHandler：Responsible for configuring parameters related to Blue Charm Beacon devices.  
+* DFU Library: Responsible for Blue Charm Beacon firmware update.
 ![avatar](https://github.com/kkmhogen/KBeaconProDemo_Android/blob/main/kbeacon_class_arc.png?raw=true)
 
 **Scanning Stage**
 
-in this stage, KBeaconsMgr will scan and parse the advertisement packet about KBeacon devices, and it will create "KBeacon" instance for every found devices, developers can get all advertisements data by its allAdvPackets or getAdvPacketByType function.
+in this stage, KBeaconsMgr will scan and parse the advertisement packet about Blue Charm Beacon devices, and it will create "KBeacon" instance for every found devices, developers can get all advertisements data by its allAdvPackets or getAdvPacketByType function.
 
 **Connection Stage**
 
@@ -324,7 +324,7 @@ mBeacon.disconnect();
 
 ### 4.3 Configure parameters
 #### 4.3.1 Advertisement type
-KBeacon devices can support broadcasting multiple type advertisement packets in parallel.  
+Blue Charm Beacon devices can support broadcasting multiple type advertisement packets in parallel.  
 For example, advertisement type was set to “iBeacon + TLM + System”, then the device will send advertisement packet like follow.   
 
 |Slot No.|0|1|2|3|4|
